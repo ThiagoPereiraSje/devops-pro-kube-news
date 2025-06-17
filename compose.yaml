@@ -13,7 +13,10 @@ services:
       - kube_news_net
 
   kube_news:
-    image: thiagopereira/kube-news:v1
+    image: thiagopereira/kube-news:latest
+    build: 
+      context: ./src
+      dockerfile: Dockerfile
     ports:
       - 8080:8080
     networks:
